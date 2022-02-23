@@ -272,7 +272,7 @@ inline uint16_t omg_dns_rr_type(const omg_dns_rr_t* rr)
 inline uint16_t omg_dns_rr_class(const omg_dns_rr_t* rr)
 {
     omg_dns_assert(rr);
-    return rr->class;
+    return rr->clazz;
 }
 
 inline uint32_t omg_dns_rr_ttl(const omg_dns_rr_t* rr)
@@ -940,7 +940,7 @@ int omg_dns_parse_rr(omg_dns_rr_t* rr, const uint8_t* buffer, size_t length)
     rr->bytes_parsed += 2;
     rr->have_type = 1;
 
-    need16(rr->class, buffer, length);
+    need16(rr->clazz, buffer, length);
     rr->bytes_parsed += 2;
     rr->have_class = 1;
 

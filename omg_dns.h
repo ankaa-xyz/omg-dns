@@ -134,7 +134,7 @@ struct omg_dns_rr {
     size_t labels;
 
     uint16_t type;
-    uint16_t class;
+    uint16_t clazz;
     uint32_t ttl;
     uint16_t rdlength;
     size_t   rdata_offset;
